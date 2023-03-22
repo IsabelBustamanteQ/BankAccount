@@ -18,7 +18,14 @@ export class BankAccount {
   }
 
   deposit(amount) {
-    this.total+=amount;
+    if(this.accountOpen==true)
+    {
+      this.total+=amount;
+    }
+    else
+    {
+      throw new ValueError();
+    }
   }
 
   withdraw(amount) {
