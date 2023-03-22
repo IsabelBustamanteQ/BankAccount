@@ -16,8 +16,8 @@ export class BankAccount {
     throw new Error("Remove this statement and implement this function");
   }
 
-  deposit() {
-    this.total+=100;
+  deposit(amount) {
+    this.total+=amount;
   }
 
   withdraw() {
