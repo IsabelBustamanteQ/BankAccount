@@ -6,6 +6,7 @@
 export class BankAccount {
   constructor() {
     this.total=0;
+    this.accountOpen=true;
   }
 
   open() {
@@ -13,7 +14,7 @@ export class BankAccount {
   }
 
   close() {
-    throw new Error("Remove this statement and implement this function");
+    this.accountOpen=false;
   }
 
   deposit(amount) {
@@ -25,7 +26,14 @@ export class BankAccount {
   }
 
   get balance() {
-    return this.total;
+    if(this.accountOpen==true)
+    {
+      return this.total;
+    }
+    else
+    {
+      throw new ValueError();
+    }
   }
 }
 
