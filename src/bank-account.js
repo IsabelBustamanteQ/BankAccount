@@ -29,7 +29,14 @@ export class BankAccount {
   }
 
   withdraw(amount) {
-    this.total-=amount;
+    if(this.accountOpen==true)
+    {
+      this.total-=amount;
+    }
+    else
+    {
+      throw new ValueError();
+    }
   }
 
   get balance() {
