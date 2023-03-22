@@ -6,15 +6,23 @@
 export class BankAccount {
   constructor() {
     this.total=0;
-    this.accountOpen=true;
+    this.accountOpen=false;
   }
 
   open() {
-    
+    this.accountOpen=true;
   }
 
   close() {
-    this.accountOpen=false;
+    if(this.accountOpen==true)
+    {
+      this.accountOpen=false;
+    }
+    else
+    {
+      throw new ValueError();
+    }
+    
   }
 
   deposit(amount) {
