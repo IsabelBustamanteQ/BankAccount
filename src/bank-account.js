@@ -34,7 +34,7 @@ export class BankAccount {
   }
 
   deposit(amount) {
-    if(this.accountOpen==true)
+    if(this.accountOpen==true && amount>=0)
     {
       this.total+=amount;
     }
