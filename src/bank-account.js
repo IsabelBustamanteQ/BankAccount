@@ -47,7 +47,7 @@ export class BankAccount {
   withdraw(amount) {
     if(this.accountOpen==true)
     {
-      if(this.total>=amount)
+      if(this.total>=amount && amount>=0)
       {
         this.total-=amount;
       }
