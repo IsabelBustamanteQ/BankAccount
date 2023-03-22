@@ -24,6 +24,7 @@ export class BankAccount {
     if(this.accountOpen==true)
     {
       this.accountOpen=false;
+      this.total=0;
     }
     else
     {
